@@ -4,7 +4,7 @@
 
 可以切换为 DAP-Link, J_Link, ST-Link 调试  
 
-工具链配置：arm-none-eabi-gcc + mingw64 + openocd
+工具链配置：arm-none-eabi-gcc + mingw64 + openocd + makefile
 
 ## 开启外设
 - GPIO 10 蓝色LED (也可以使用TIM5 CH通道控制)

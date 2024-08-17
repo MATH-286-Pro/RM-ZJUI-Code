@@ -73,6 +73,15 @@
     "pid.h": "c",
     "rc.h": "c",
     "can_test.h": "c",
-    "cmsis_os.h": "c"
-  }
+    "cmsis_os.h": "c",
+    "motors.h": "c"
+  },
+  "makefile.makePath": "D:\\Software_Type_B\\MSYS\\Installation\\usr\\bin\\make.exe",
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "d:\\DeskTop\\Embedded\\RM\\RM-ZJUI-Code\\build",
+      "binaryPath": "d:\\DeskTop\\Embedded\\RM\\RM-ZJUI-Code\\build\\basic_framework.elf",
+      "binaryArgs": []
+    }
+  ]
 }

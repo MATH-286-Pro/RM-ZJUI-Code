@@ -30,7 +30,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "motors.h"
+#include "rc.h"
+#include "buzzer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -105,6 +107,9 @@ int main(void)
   MX_TIM4_Init();
   MX_USART1_UART_Init();
   MX_USART6_UART_Init();
+  MX_TIM2_Init();
+  MX_TIM3_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
   // //定时器 TIM5 点灯
   // //开启定时器
@@ -115,9 +120,14 @@ int main(void)
   // HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
 
   //GPIO 点灯
-  // HAL_GPIO_WritePin(GPIOH, LED_R_Pin, GPIO_PIN_SET);
-  // HAL_GPIO_WritePin(GPIOH, LED_G_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOH, LED_R_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOH, LED_G_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOH, LED_B_Pin, GPIO_PIN_SET);
+
+  Buzzer_beep();
+  Dbus_Init();
+  HAL_Delay(1000);
+  Enable_Motors();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
