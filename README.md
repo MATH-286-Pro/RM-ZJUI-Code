@@ -10,5 +10,7 @@
 - GPIO 10 蓝色LED (也可以使用TIM5 CH通道控制)
 - GPIO 11 绿色LED (也可以使用TIM5 CH通道控制)
 - GPIO 12 红色LED (也可以使用TIM5 CH通道控制)
+- CAN 1
+- CAN 2
 
 ## FreeRTOS 任务表

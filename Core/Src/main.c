@@ -115,8 +115,8 @@ int main(void)
   // HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
 
   //GPIO 点灯
-  HAL_GPIO_WritePin(GPIOH, LED_R_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(GPIOH, LED_G_Pin, GPIO_PIN_SET);
+  // HAL_GPIO_WritePin(GPIOH, LED_R_Pin, GPIO_PIN_SET);
+  // HAL_GPIO_WritePin(GPIOH, LED_G_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOH, LED_B_Pin, GPIO_PIN_SET);
   /* USER CODE END 2 */
 
