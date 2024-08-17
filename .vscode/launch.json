@@ -1,0 +1,56 @@
+{
+  "configurations": [
+    {
+      "showDevDebugOutput": "parsed",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceRoot}\\build\\basic_framework.elf",
+      "name": "Debug-DAP-Link",
+      "request": "launch",
+      "preLaunchTask": "buildEmbeddedTargets",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "device": "stm32f407",
+      "configFiles": [
+        // "interface/cmsis-dap.cfg",  //现在使用DAP-Link烧录 //interface/stlink-v2.cfg
+        // "target/stm32f4x.cfg"
+        "openocd_dap.cfg"
+      ],
+      "armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin"
+    },
+    {
+      "showDevDebugOutput": "parsed",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceRoot}\\build\\basic_framework.elf",
+      "name": "Debug-ST-Link",
+      "request": "launch",
+      "preLaunchTask": "buildEmbeddedTargets",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "device": "stm32f407",
+      "configFiles": [
+        "interface/interface/stlink-v2.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/DeskTop/Embedded/Infantry_test/Code_HNU_INS/Core/Src",
+      "program": "d:/DeskTop/Embedded/Infantry_test/Code_HNU_INS/Core/Src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
