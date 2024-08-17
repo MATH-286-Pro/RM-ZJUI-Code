@@ -11,8 +11,6 @@
       "servertype": "openocd",
       "device": "stm32f407",
       "configFiles": [
-        // "interface/cmsis-dap.cfg",  //现在使用DAP-Link烧录 //interface/stlink-v2.cfg
-        // "target/stm32f4x.cfg"
         "openocd_dap.cfg"
       ],
       "armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin"
@@ -28,8 +26,7 @@
       "servertype": "openocd",
       "device": "stm32f407",
       "configFiles": [
-        "interface/interface/stlink-v2.cfg",
-        "target/stm32f4x.cfg"
+        "openocd_stlink.cfg"
       ],
       "armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin"
     },
